@@ -3,15 +3,18 @@ import { useLoaderData } from 'react-router'
 import './Products.css'
 import ProductItem from '../components/ProductItem'
 import { fuzzyMatch } from '../data/utils.js'
+import { useSelector } from 'react-redux'
 // TODO: hämta data från Redux
 
 const Products = () => {
-	const vegetables = ???
+	const vegetables = useSelector(state => state.vegetables)
 	const [searchText, setSearchText] = useState('')
+
+	console.log('Product veggies: ', vegetables)
 
 	// Enkel sökning
 	// const calculateValue = () => searchText === '' ? vegetables : vegetables.filter(v => match(searchText, v.name))
-	const calculateValue  =() => searchText === '' ? vegetables : fuzzyMatch(searchText)
+	const calculateValue = () => searchText === '' ? vegetables : fuzzyMatch(searchText)
 
 	const matchingVeggies = useMemo(
 		calculateValue,

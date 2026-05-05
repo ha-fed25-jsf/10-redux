@@ -1,6 +1,7 @@
 import Fuse from "fuse.js"
 import { vegetables } from "./products.js"
 
+// TODO: vegetables borde använda Redux store i stället - flytta till lämplig komponent
 const fuse = new Fuse(vegetables, {
 	// vilka egenskaper ska man kunna söka på?
 	// { id, name, price, blurb, description }
