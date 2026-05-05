@@ -14,7 +14,7 @@ const Details = () => {
 	// Alt 1: använd loader
 	// const vegetables = useLoaderData()
 	// Alternativ 2: lägg vegetables i en store (Zustand) och hämta den därifrån
-	const vegetables = useStore(state => state.vegetables)
+	const vegetables = ???
 
 	// Leta upp produkten vi ska visa. Om länken är felaktig, kanske det inte finns någon produkt som matchar. item kan vara UNDEFINED
 	const item = vegetables.find(v => v.id === Number(id))

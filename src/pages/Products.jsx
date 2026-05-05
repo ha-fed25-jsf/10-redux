@@ -3,15 +3,10 @@ import { useLoaderData } from 'react-router'
 import './Products.css'
 import ProductItem from '../components/ProductItem'
 import { fuzzyMatch } from '../data/utils.js'
-import { useStore } from '../data/store.js'
+// TODO: hämta data från Redux
 
 const Products = () => {
-	/* Hämta data alterantiv 1: använd loader-funktion i router-konfigurationen
-	// useLoaderData returnerar data av samma typ som loader-funktionen returnerar
-	const vegetables = useLoaderData()
-	*/
-	// Alternativ 2: lagra datan i store, använd selector-funktion för att hämta ut den
-	const vegetables = useStore(state => state.vegetables)
+	const vegetables = ???
 	const [searchText, setSearchText] = useState('')
 
 	// Enkel sökning
